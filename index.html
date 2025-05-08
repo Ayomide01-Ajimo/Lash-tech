@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petal & Claw - Nail Art with Elegance</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#F1C6D4',secondary:'#B76E79'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+.metallic-text {
+background: linear-gradient(135deg, #f9c4d2, #d18192, #f9c4d2);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.1);
+}
+.metallic-border {
+border-image: linear-gradient(135deg, #f9c4d2, #d18192, #f9c4d2) 1;
+}
+.metallic-button {
+background: linear-gradient(135deg, #f9c4d2, #d18192, #f9c4d2);
+transition: all 0.3s ease;
+box-shadow: 0 4px 6px rgba(209, 129, 146, 0.1);
+}
+.metallic-button:hover {
+box-shadow: 0 6px 8px rgba(209, 129, 146, 0.2);
+transform: translateY(-2px);
+}
+.service-card {
+transition: all 0.3s ease;
+}
+.service-card:hover {
+transform: scale(1.02);
+box-shadow: 0 10px 15px rgba(209, 129, 146, 0.1);
+}
+.portfolio-item {
+overflow: hidden;
+transition: all 0.3s ease;
+}
+.portfolio-item:hover img {
+transform: scale(1.05);
+}
+.portfolio-item:hover .overlay {
+opacity: 1;
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #B76E79;
+box-shadow: 0 0 0 2px rgba(183, 110, 121, 0.2);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.custom-checkbox {
+appearance: none;
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #B76E79;
+border-radius: 4px;
+outline: none;
+cursor: pointer;
+position: relative;
+}
+.custom-checkbox:checked {
+background-color: #B76E79;
+}
+.custom-checkbox:checked::after {
+content: '';
+position: absolute;
+top: 3px;
+left: 6px;
+width: 6px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 48px;
+height: 24px;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.switch-slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #F9F9F9;
+border: 1px solid #E5E7EB;
+transition: .4s;
+border-radius: 24px;
+}
+.switch-slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 2px;
+background-color: white;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .switch-slider {
+background-color: #B76E79;
+}
+input:checked + .switch-slider:before {
+transform: translateX(24px);
+}
+.custom-radio {
+appearance: none;
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #B76E79;
+border-radius: 50%;
+outline: none;
+cursor: pointer;
+position: relative;
+}
+.custom-radio:checked {
+border-color: #B76E79;
+}
+.custom-radio:checked::after {
+content: '';
+position: absolute;
+top: 3px;
+left: 3px;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #B76E79;
+}
+.custom-range {
+-webkit-appearance: none;
+width: 100%;
+height: 6px;
+border-radius: 3px;
+background: #F9F9F9;
+border: 1px solid #E5E7EB;
+outline: none;
+}
+.custom-range::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 18px;
+height: 18px;
+border-radius: 50%;
+background: #B76E79;
+cursor: pointer;
+border: 2px solid white;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.custom-range::-moz-range-thumb {
+width: 18px;
+height: 18px;
+border-radius: 50%;
+background: #B76E79;
+cursor: pointer;
+border: 2px solid white;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+</style>
+</head>
+<body class="bg-[#FFFFFF] text-gray-800">
+<!-- Header -->
+<header class="fixed w-full bg-white bg-opacity-95 shadow-sm z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<a href="#" class="text-2xl font-['Playfair_Display'] font-bold metallic-text">Petal & Claw</a>
+<nav class="hidden md:flex space-x-8">
+<a href="#about" class="text-gray-700 hover:text-secondary transition-colors">About</a>
+<a href="#services" class="text-gray-700 hover:text-secondary transition-colors">Services</a>
+<a href="#portfolio" class="text-gray-700 hover:text-secondary transition-colors">Portfolio</a>
+<a href="#contact" class="text-gray-700 hover:text-secondary transition-colors">Contact</a>
+</nav>
+<button class="metallic-button text-white px-5 py-2 !rounded-button whitespace-nowrap hidden md:block">Book Now</button>
+<div class="md:hidden w-8 h-8 flex items-center justify-center">
+<i class="ri-menu-line ri-lg"></i>
+</div>
+</div>
+</header>
+<!-- Mobile Menu (Hidden by default) -->
+<div class="fixed inset-0 bg-white z-40 hidden flex-col pt-16 px-6">
+<div class="flex justify-end">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-close-line ri-lg"></i>
+</div>
+</div>
+<nav class="flex flex-col space-y-6 mt-8 text-center">
+<a href="#about" class="text-xl text-gray-700 hover:text-secondary transition-colors">About</a>
+<a href="#services" class="text-xl text-gray-700 hover:text-secondary transition-colors">Services</a>
+<a href="#portfolio" class="text-xl text-gray-700 hover:text-secondary transition-colors">Portfolio</a>
+<a href="#contact" class="text-xl text-gray-700 hover:text-secondary transition-colors">Contact</a>
+<button class="metallic-button text-white py-3 !rounded-button whitespace-nowrap mt-4">Book Now</button>
+</nav>
+</div>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center" style="background-image: url('https://static.readdy.ai/image/92a63dccfd8ac39682f6f1dc4bfb924c/44586986d5ee3b7ebb59dd62747096e6.png'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/50"></div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="max-w-3xl">
+<h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-md">Beauty at Your Fingertips</h1>
+<p class="text-xl md:text-2xl text-white/90 mb-10 max-w-2xl">Experience the art of nail perfection at Petal & Claw, where elegance meets creativity in every design.</p>
+<button class="metallic-button text-white px-10 py-4 !rounded-button whitespace-nowrap text-xl shadow-lg">Book a Session</button>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 bg-[#F9F9F9]">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-2/5">
+<div class="relative rounded-lg overflow-hidden shadow-xl">
+<img src="https://static.readdy.ai/image/92a63dccfd8ac39682f6f1dc4bfb924c/923a8a155bb0a545efea95692d0e1d7c.png" alt="Nail Technician" class="w-full h-auto object-cover">
+<div class="absolute inset-0 border-2 border-secondary opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+</div>
+<div class="md:w-3/5">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
+<div class="w-20 h-1 bg-secondary mb-8"></div>
+<p class="mb-6 text-gray-700 leading-relaxed">Founded by Emma Richardson in 2020, Petal & Claw was born from a passion for creating beautiful, unique nail art that empowers clients to express their personal style. With over a decade of experience in the beauty industry, Emma has cultivated a space where creativity and precision meet.</p>
+<p class="mb-8 text-gray-700 leading-relaxed">Our philosophy is simple: every client deserves a personalized experience that leaves them feeling confident and beautiful. We use only premium products and stay at the forefront of nail art techniques to ensure your nails are not just decorated, but transformed into wearable art.</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-md">
+<i class="ri-instagram-line ri-lg text-secondary"></i>
+</div>
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-md">
+<i class="ri-facebook-line ri-lg text-secondary"></i>
+</div>
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-md">
+<i class="ri-pinterest-line ri-lg text-secondary"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Discover our range of premium nail services designed to pamper and perfect your hands and feet.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="service-card bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-48 overflow-hidden">
+<img src="https://static.readdy.ai/image/92a63dccfd8ac39682f6f1dc4bfb924c/f3ee84247612ce71e229f2d292f603ce.png" alt="Classic Manicure" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/20">
+<i class="ri-hand-heart-line ri-lg text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold">Classic Manicure</h3>
+</div>
+<p class="text-gray-600 mb-4">Our signature manicure includes nail shaping, cuticle care, hand massage, and polish application with premium products.</p>
+<div class="flex justify-between items-center">
+<span class="text-secondary font-semibold">$35</span>
+<span class="text-gray-500 text-sm">45 minutes</span>
+</div>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="service-card bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-48 overflow-hidden">
+<img src="https://static.readdy.ai/image/92a63dccfd8ac39682f6f1dc4bfb924c/a0bd7d3ae77c795718e374f6a35d0aa1.png" alt="Gel Manicure" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/20">
+<i class="ri-paint-brush-line ri-lg text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold">Gel Manicure</h3>
+</div>
+<p class="text-gray-600 mb-4">Long-lasting gel polish application that provides a glossy, chip-free finish for up to two weeks with no dry time.</p>
+<div class="flex justify-between items-center">
+<span class="text-secondary font-semibold">$45</span>
+<span class="text-gray-500 text-sm">60 minutes</span>
+</div>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="service-card bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-48 overflow-hidden">
+<img src="https://static.readdy.ai/image/92a63dccfd8ac39682f6f1dc4bfb924c/6dde3988c853fb8856c23ea4c4154934.png" alt="Luxury Pedicure" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/20">
+<i class="ri-footprint-line ri-lg text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold">Luxury Pedicure</h3>
+</div>
+<p class="text-gray-600 mb-4">Indulgent foot treatment including soak, exfoliation, callus removal, massage, and polish with premium products.</p>
+<div class="flex justify-between items-center">
+<span class="text-secondary font-semibold">$55</span>
+<span class="text-gray-500 text-sm">75 minutes</span>
+</div>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="service-card bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-48 overflow-hidden">
+<img src="https://static.readdy.ai/image/92a63dccfd8ac39682f6f1dc4bfb924c/80263798cadda52fbfc06baead445a6b.png" alt="Nail Art Design" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/20">
+<i class="ri-palette-line ri-lg text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold">Nail Art Design</h3>
+</div>
+<p class="text-gray-600 mb-4">Custom nail art ranging from simple accents to elaborate designs, tailored to your personal style and preferences.</p>
+<div class="flex justify-between items-center">
+<span class="text-secondary font-semibold">$15+</span>
+<span class="text-gray-500 text-sm">Varies</span>
+</div>
+</div>
+</div>
+<!-- Service 5 -->
+<div class="service-card bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-48 overflow-hidden">
+<img src="https://static.readdy.ai/image/92a63dccfd8ac39682f6f1dc4bfb924c/37f8fa7358ca330487007cb3d1dc5c1b.png" alt="Acrylic Extensions" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/20">
+<i class="ri-scissors-line ri-lg text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold">Acrylic Extensions</h3>
+</div>
+<p class="text-gray-600 mb-4">Full set of acrylic nail extensions that provide length and strength, customized to your desired shape and length.</p>
+<div class="flex justify-between items-center">
+<span class="text-secondary font-semibold">$65</span>
+<span class="text-gray-500 text-sm">90 minutes</span>
+</div>
+</div>
+</div>
+<!-- Service 6 -->
+<div class="service-card bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-48 overflow-hidden">
+<img src="https://static.readdy.ai/image/92a63dccfd8ac39682f6f1dc4bfb924c/2038cb9ac5d6bde72b349c4230ed9484.png" alt="Nail Repair" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/20">
+<i class="ri-heart-pulse-line ri-lg text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold">Nail Repair & Treatment</h3>
+</div>
+<p class="text-gray-600 mb-4">Restorative treatments for damaged nails including strengthening, repair, and specialized care for specific nail concerns.</p>
+<div class="flex justify-between items-center">
+<span class="text-secondary font-semibold">$25+</span>
+<span class="text-gray-500 text-sm">30+ minutes</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-20 bg-[#F9F9F9]">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Portfolio</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Browse through our collection of nail art designs to find inspiration for your next visit.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Portfolio Item 1 -->
+<div class="portfolio-item rounded-lg overflow-hidden shadow-md relative group">
+<img src="https://readdy.ai/api/search-image?query=elegant%20minimalist%20nail%20design%20with%20soft%20pink%20and%20rose%20gold%20accents%2C%20clean%20modern%20manicure%20with%20metallic%20details%2C%20professional%20nail%20photography%20on%20light%20background%2C%20luxury%20nail%20art%20with%20subtle%20shimmer%20effect&width=600&height=600&seq=9&orientation=squarish" alt="Minimalist Design" class="w-full h-64 object-cover object-top transition-transform duration-500">
+<div class="overlay absolute inset-0 bg-secondary bg-opacity-20 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<div class="text-center p-4">
+<h3 class="text-white text-xl font-bold mb-2 drop-shadow-md">Minimalist Elegance</h3>
+<p class="text-white text-sm">Gel Polish with Gold Accents</p>
+</div>
+</div>
+</div>
+<!-- Portfolio Item 2 -->
+<div class="portfolio-item rounded-lg overflow-hidden shadow-md relative group">
+<img src="https://static.readdy.ai/image/92a63dccfd8ac39682f6f1dc4bfb924c/2c4007ec4491b415a402d2c91e6d9aeb.png" alt="Floral Design" class="w-full h-64 object-cover object-top transition-transform duration-500">
+<div class="overlay absolute inset-0 bg-secondary bg-opacity-20 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<div class="text-center p-4">
+<h3 class="text-white text-xl font-bold mb-2 drop-shadow-md">Spring Blossoms</h3>
+<p class="text-white text-sm">Hand-painted Floral Art</p>
+</div>
+</div>
+</div>
+<!-- Portfolio Item 3 -->
+<div class="portfolio-item rounded-lg overflow-hidden shadow-md relative group">
+<img src="https://readdy.ai/api/search-image?query=geometric%20nail%20art%20design%20with%20metallic%20rose%20gold%20and%20matte%20pink%20elements%2C%20modern%20abstract%20nail%20pattern%2C%20professional%20nail%20photography%20on%20light%20background%2C%20luxury%20nail%20art%20with%20precise%20lines%20and%20shapes&width=600&height=600&seq=11&orientation=squarish" alt="Geometric Design" class="w-full h-64 object-cover object-top transition-transform duration-500">
+<div class="overlay absolute inset-0 bg-secondary bg-opacity-20 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<div class="text-center p-4">
+<h3 class="text-white text-xl font-bold mb-2 drop-shadow-md">Geometric Glam</h3>
+<p class="text-white text-sm">Metallic Accent Design</p>
+</div>
+</div>
+</div>
+<!-- Portfolio Item 4 -->
+<div class="portfolio-item rounded-lg overflow-hidden shadow-md relative group">
+<img src="https://readdy.ai/api/search-image?query=ombre%20nail%20design%20transitioning%20from%20soft%20pink%20to%20white%20with%20subtle%20glitter%2C%20gradient%20nail%20effect%2C%20professional%20nail%20photography%20on%20light%20background%2C%20luxury%20nail%20art%20with%20smooth%20color%20transition&width=600&height=600&seq=12&orientation=squarish" alt="Ombre Design" class="w-full h-64 object-cover object-top transition-transform duration-500">
+<div class="overlay absolute inset-0 bg-secondary bg-opacity-20 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<div class="text-center p-4">
+<h3 class="text-white text-xl font-bold mb-2 drop-shadow-md">Blush Ombre</h3>
+<p class="text-white text-sm">Gradient with Shimmer</p>
+</div>
+</div>
+</div>
+<!-- Portfolio Item 5 -->
+<div class="portfolio-item rounded-lg overflow-hidden shadow-md relative group">
+<img src="https://readdy.ai/api/search-image?query=marble%20nail%20art%20design%20with%20pink%2C%20white%20and%20gold%20swirls%2C%20elegant%20stone-inspired%20nail%20pattern%2C%20professional%20nail%20photography%20on%20light%20background%2C%20luxury%20nail%20art%20with%20realistic%20marble%20effect&width=600&height=600&seq=13&orientation=squarish" alt="Marble Design" class="w-full h-64 object-cover object-top transition-transform duration-500">
+<div class="overlay absolute inset-0 bg-secondary bg-opacity-20 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<div class="text-center p-4">
+<h3 class="text-white text-xl font-bold mb-2 drop-shadow-md">Rose Marble</h3>
+<p class="text-white text-sm">Luxury Stone Effect</p>
+</div>
+</div>
+</div>
+<!-- Portfolio Item 6 -->
+<div class="portfolio-item rounded-lg overflow-hidden shadow-md relative group">
+<img src="https://static.readdy.ai/image/92a63dccfd8ac39682f6f1dc4bfb924c/7365269ab0ed7519db16f3b6b213e88e.png" alt="French Manicure" class="w-full h-64 object-cover object-top transition-transform duration-500">
+<div class="overlay absolute inset-0 bg-secondary bg-opacity-20 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<div class="text-center p-4">
+<h3 class="text-white text-xl font-bold mb-2 drop-shadow-md">Modern French</h3>
+<p class="text-white text-sm">Classic with a Twist</p>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<button class="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white transition-colors px-8 py-3 !rounded-button whitespace-nowrap font-medium">View More Designs</button>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Client Love</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Hear what our clients have to say about their experiences at Petal & Claw.</p>
+</div>
+<div class="max-w-4xl mx-auto">
+<div class="relative">
+<!-- Testimonial Slider -->
+<div class="overflow-hidden">
+<div class="flex transition-transform duration-500" id="testimonialSlider">
+<!-- Testimonial 1 -->
+<div class="w-full flex-shrink-0 px-4">
+<div class="bg-[#F9F9F9] rounded-lg p-8 shadow-md">
+<div class="flex justify-center mb-4">
+<div class="flex text-secondary">
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+</div>
+</div>
+<p class="text-gray-700 text-center italic mb-6">"I've been going to Petal & Claw for over a year now, and I'm always amazed by the creativity and precision. Emma has a true talent for understanding exactly what I want, even when I can't fully articulate it. My nails have never looked better!"</p>
+<div class="flex items-center justify-center">
+<div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20smiling%20woman%20in%20her%2030s%20with%20medium%20length%20brown%20hair%2C%20neutral%20background%2C%20warm%20friendly%20expression%2C%20business%20casual%20attire%2C%20soft%20lighting&width=100&height=100&seq=15&orientation=squarish" alt="Client" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-bold">Sophia Williams</h4>
+<p class="text-sm text-gray-500">Regular Client</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="w-full flex-shrink-0 px-4">
+<div class="bg-[#F9F9F9] rounded-lg p-8 shadow-md">
+<div class="flex justify-center mb-4">
+<div class="flex text-secondary">
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+</div>
+</div>
+<p class="text-gray-700 text-center italic mb-6">"The attention to detail at Petal & Claw is unmatched. I recently had their luxury pedicure and gel manicure combo, and it was the most relaxing spa experience. The nail art designs are absolutely stunning and last for weeks!"</p>
+<div class="flex items-center justify-center">
+<div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20confident%20asian%20woman%20in%20her%2040s%20with%20black%20shoulder%20length%20hair%2C%20elegant%20business%20attire%2C%20natural%20makeup%2C%20warm%20smile%2C%20studio%20lighting&width=100&height=100&seq=16&orientation=squarish" alt="Client" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-bold">Michelle Chen</h4>
+<p class="text-sm text-gray-500">VIP Client</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="w-full flex-shrink-0 px-4">
+<div class="bg-[#F9F9F9] rounded-lg p-8 shadow-md">
+<div class="flex justify-center mb-4">
+<div class="flex text-secondary">
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+</div>
+</div>
+<p class="text-gray-700 text-center italic mb-6">"Found this gem on Instagram and decided to give it a try for my wedding nails. The bridal package was perfect, and they created the most beautiful, delicate design that matched my dress perfectly. The whole team is so professional and talented!"</p>
+<div class="flex items-center justify-center">
+<div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20young%20woman%20in%20her%2020s%20with%20blonde%20hair%2C%20natural%20makeup%2C%20bright%20smile%2C%20casual%20chic%20style%2C%20outdoor%20natural%20lighting&width=100&height=100&seq=17&orientation=squarish" alt="Client" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-bold">Emily Thompson</h4>
+<p class="text-sm text-gray-500">Bridal Client</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation Arrows -->
+<button class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-6 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-secondary focus:outline-none">
+<i class="ri-arrow-left-s-line ri-lg"></i>
+</button>
+<button class="absolute top-1/2 right-0 -translate-y-1/2 translate-x-6 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-secondary focus:outline-none">
+<i class="ri-arrow-right-s-line ri-lg"></i>
+</button>
+</div>
+<!-- Dots -->
+<div class="flex justify-center mt-8 space-x-2">
+<button class="w-3 h-3 rounded-full bg-secondary"></button>
+<button class="w-3 h-3 rounded-full bg-gray-300"></button>
+<button class="w-3 h-3 rounded-full bg-gray-300"></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Email Marketing Section -->
+<section class="py-20 bg-[#F9F9F9]">
+<div class="container mx-auto px-6">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Stay Beautiful, Stay Connected</h2>
+<p class="text-gray-600 mb-8">Subscribe to our newsletter for exclusive offers, nail care tips, and the latest trends in nail art.</p>
+<div class="bg-white p-8 rounded-lg shadow-md">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="relative">
+<input type="text" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-secondary" placeholder="First Name" required>
+</div>
+<div class="relative">
+<input type="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-secondary" placeholder="Email Address" required>
+</div>
+</div>
+<div class="flex items-start">
+<input type="checkbox" id="consent" class="custom-checkbox mt-1">
+<label for="consent" class="ml-3 text-sm text-gray-600">I agree to receive promotional emails and understand I can unsubscribe at any time.</label>
+</div>
+<button type="submit" class="metallic-button text-white px-8 py-3 !rounded-button whitespace-nowrap w-full md:w-auto">Subscribe</button>
+</form>
+<div class="mt-6 text-sm text-gray-500">
+<p>First-time subscribers receive 10% off their next appointment!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking Section -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Book Your Appointment</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Schedule your next nail transformation with us. Select your preferred service and time.</p>
+</div>
+<div class="max-w-4xl mx-auto">
+<div class="bg-[#F9F9F9] rounded-lg shadow-md overflow-hidden">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-1/3 bg-secondary p-8 text-white">
+<h3 class="text-2xl font-bold mb-6">Opening Hours</h3>
+<ul class="space-y-4">
+<li class="flex justify-between">
+<span>Monday - Friday</span>
+<span>9am - 7pm</span>
+</li>
+<li class="flex justify-between">
+<span>Saturday</span>
+<span>9am - 6pm</span>
+</li>
+<li class="flex justify-between">
+<span>Sunday</span>
+<span>10am - 4pm</span>
+</li>
+</ul>
+<div class="mt-8">
+<h4 class="font-bold mb-2">Contact</h4>
+<p class="flex items-center mb-2">
+<i class="ri-phone-line mr-2"></i> (555) 123-4567
+</p>
+<p class="flex items-center">
+<i class="ri-mail-line mr-2"></i> info@petalandclaw.com
+</p>
+</div>
+</div>
+<div class="md:w-2/3 p-8">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="relative">
+<label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+<input type="text" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-secondary" required>
+</div>
+<div class="relative">
+<label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+<input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-secondary" required>
+</div>
+</div>
+<div class="relative">
+<label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+<input type="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-secondary" required>
+</div>
+<div class="relative">
+<label class="block text-sm font-medium text-gray-700 mb-1">Select Service</label>
+<div class="relative">
+<select class="w-full px-4 py-3 border border-gray-300 rounded focus:border-secondary appearance-none pr-8" required>
+<option value="">Choose a service</option>
+<option>Classic Manicure - $35</option>
+<option>Gel Manicure - $45</option>
+<option>Luxury Pedicure - $55</option>
+<option>Nail Art Design - $15+</option>
+<option>Acrylic Extensions - $65</option>
+<option>Nail Repair & Treatment - $25+</option>
+</select>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="relative">
+<label class="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
+<input type="date" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-secondary" required>
+</div>
+<div class="relative">
+<label class="block text-sm font-medium text-gray-700 mb-1">Preferred Time</label>
+<input type="time" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-secondary" required>
+</div>
+</div>
+<div class="relative">
+<label class="block text-sm font-medium text-gray-700 mb-1">Special Requests</label>
+<textarea class="w-full px-4 py-3 border border-gray-300 rounded focus:border-secondary h-24 resize-none"></textarea>
+</div>
+<button type="submit" class="metallic-button text-white px-8 py-3 !rounded-button whitespace-nowrap">Book Appointment</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<footer id="contact" class="bg-[#F9F9F9] pt-20 pb-8">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<h3 class="text-xl font-bold mb-6">About Petal & Claw</h3>
+<p class="text-gray-600 mb-6">Experience the art of nail perfection at Petal & Claw, where elegance meets creativity in every design. Your destination for premium nail care and artistic expression.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/20 text-secondary hover:bg-secondary hover:text-white transition-colors">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/20 text-secondary hover:bg-secondary hover:text-white transition-colors">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/20 text-secondary hover:bg-secondary hover:text-white transition-colors">
+<i class="ri-pinterest-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/20 text-secondary hover:bg-secondary hover:text-white transition-colors">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#about" class="text-gray-600 hover:text-secondary transition-colors">About Us</a></li>
+<li><a href="#services" class="text-gray-600 hover:text-secondary transition-colors">Services</a></li>
+<li><a href="#portfolio" class="text-gray-600 hover:text-secondary transition-colors">Portfolio</a></li>
+<li><a href="#" class="text-gray-600 hover:text-secondary transition-colors">Book Appointment</a></li>
+<li><a href="#" class="text-gray-600 hover:text-secondary transition-colors">Gift Cards</a></li>
+<li><a href="#" class="text-gray-600 hover:text-secondary transition-colors">Career</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Contact Info</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<i class="ri-map-pin-line text-secondary mt-1 mr-3"></i>
+<span class="text-gray-600">123 Beauty Lane, Suite 4<br>New York, NY 10001</span>
+</li>
+<li class="flex items-center">
+<i class="ri-phone-line text-secondary mr-3"></i>
+<span class="text-gray-600">(555) 123-4567</span>
+</li>
+<li class="flex items-center">
+<i class="ri-mail-line text-secondary mr-3"></i>
+<span class="text-gray-600">info@petalandclaw.com</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Opening Hours</h3>
+<ul class="space-y-3">
+<li class="flex justify-between">
+<span class="text-gray-600">Monday - Friday</span>
+<span class="text-gray-600">9am - 7pm</span>
+</li>
+<li class="flex justify-between">
+<span class="text-gray-600">Saturday</span>
+<span class="text-gray-600">9am - 6pm</span>
+</li>
+<li class="flex justify-between">
+<span class="text-gray-600">Sunday</span>
+<span class="text-gray-600">10am - 4pm</span>
+</li>
+</ul>
+<div class="mt-6">
+<h4 class="font-bold mb-3">We Accept</h4>
+<div class="flex space-x-3">
+<i class="ri-visa-fill ri-lg text-gray-600"></i>
+<i class="ri-mastercard-fill ri-lg text-gray-600"></i>
+<i class="ri-paypal-fill ri-lg text-gray-600"></i>
+<i class="ri-apple-fill ri-lg text-gray-600"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- Footer -->
+<footer class="bg-white py-4 border-t border-gray-200">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-2">
+<p class="text-gray-500 text-sm">&copy; 2025 Petal & Claw. All rights reserved.</p>
+<div class="flex gap-4">
+<a href="#" class="text-gray-500 text-sm hover:text-secondary transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-500 text-sm hover:text-secondary transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-500 text-sm hover:text-secondary transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Mobile menu toggle
+const menuButton = document.querySelector('.ri-menu-line').parentElement;
+const closeButton = document.querySelector('.ri-close-line').parentElement;
+const mobileMenu = document.querySelector('.fixed.inset-0.bg-white');
+const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+menuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('hidden');
+mobileMenu.classList.add('flex');
+});
+closeButton.addEventListener('click', function() {
+mobileMenu.classList.remove('flex');
+mobileMenu.classList.add('hidden');
+});
+mobileMenuLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.remove('flex');
+mobileMenu.classList.add('hidden');
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Testimonial slider
+const slider = document.getElementById('testimonialSlider');
+const dots = document.querySelectorAll('.flex.justify-center.mt-8 button');
+const prevButton = document.querySelector('.absolute.top-1/2.left-0');
+const nextButton = document.querySelector('.absolute.top-1/2.right-0');
+let currentSlide = 0;
+const slideCount = 3;
+function goToSlide(index) {
+if (index < 0) index = slideCount - 1;
+if (index >= slideCount) index = 0;
+currentSlide = index;
+slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+// Update dots
+dots.forEach((dot, i) => {
+if (i === currentSlide) {
+dot.classList.remove('bg-gray-300');
+dot.classList.add('bg-secondary');
+} else {
+dot.classList.remove('bg-secondary');
+dot.classList.add('bg-gray-300');
+}
+});
+}
+// Add event listeners
+if (prevButton) {
+prevButton.addEventListener('click', () => goToSlide(currentSlide - 1));
+}
+if (nextButton) {
+nextButton.addEventListener('click', () => goToSlide(currentSlide + 1));
+}
+dots.forEach((dot, i) => {
+dot.addEventListener('click', () => goToSlide(i));
+});
+// Auto-advance slides every 5 seconds
+setInterval(() => {
+goToSlide(currentSlide + 1);
+}, 5000);
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80, // Adjust for header height
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+</body>
+</html>
